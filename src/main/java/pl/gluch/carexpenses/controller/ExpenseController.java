@@ -26,8 +26,8 @@ public class ExpenseController {
         return expenseService.saveExpense(expense);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteExpense(final Long id) {
+    @DeleteMapping("/delete/{id}")
+    public void deleteExpense(@PathVariable final Long id) {
         expenseService.deleteExpense(id);
     }
 }
