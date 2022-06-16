@@ -25,4 +25,8 @@ public class CategoryController {
         return categoryService.saveCategory(category);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteExpense(@PathVariable final Long id) {
+        categoryService.deleteCategory(id);
+    }
 }
